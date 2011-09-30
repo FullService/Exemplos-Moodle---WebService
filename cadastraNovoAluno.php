@@ -39,7 +39,7 @@ $user1->mailformat = 1;					// Int, usar 0 para formato plano, ou 1 para formato
 $user1->description = 'Sou o cara  migrado do Sistema Aula para aqui e não onde estou.';
 										// Descrição do usuário.
 //$user1->city = 'Belo Horizonte';
-$user1->country = 'br';
+$user1->country = 'BR';					// String, país com duas letras, em maiúsculas.
 
 $preferencename1 = array('type' => 'turma', 'value' => 'T-451');
 $preferencename2 = array('type' => 'unidade', 'value' => 'U-4');
