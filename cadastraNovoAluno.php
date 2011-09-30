@@ -22,21 +22,25 @@ $soapAction = "moodle_user_create_users";
 
 
 $user1 = new stdClass();
-$user1->username = 'usuarioexemplo3';
-$user1->password = 'Senha_1235r';
-$user1->firstname = 'Primeiro2';
-$user1->lastname = 'Ultimo';
-$user1->email = 'exemplo2@carlosdelfino.eti.br';
-$user1->auth = 'manual';
-$user1->idnumber = '3309z0z0.a.as222';
-//$user1->lang = 'pt-BR';
-$user1->theme = 'standard';
-//$user1->timezone = '-3';
-//$user1->mailformat = 0;
-//$user1->description = 'Sou o cara  migrado do Sistema Aula para aqui e não onde estou.';
+$user1->username = 'usuarioexemplo7';	//String 
+$user1->password = 'Senha_1235r';		// 
+$user1->firstname = 'Primeiro2';		//
+$user1->lastname = 'Ultimo';			//
+$user1->email = 'exemplo7@carlosdelfino.eti.br'; // String
+$user1->auth = 'manual';				// String, metodo de autenticação, 
+										// usar sempre "manual", 
+										// podemos criar um metodo de 
+										// autenticação padrão para o SistemaAula.
+$user1->idnumber = '7305z0z0.a.as222';	// String, até 100 Caracteres, codigo unico que identifica o usuário no processo de integração.
+$user1->lang = 'pt_br';					// String, Observe que está fora do padrão 
+$user1->theme = 'standard';				// String, padrão para "starndard"
+$user1->timezone = '-3';				// String, usar sempre -3, ou "America/Brazil"
+$user1->mailformat = 1;					// Int, usar 0 para formato plano, ou 1 para formato HTML
+$user1->description = 'Sou o cara  migrado do Sistema Aula para aqui e não onde estou.';
+										// Descrição do usuário.
 //$user1->city = 'Belo Horizonte';
 $user1->country = 'br';
-/*
+
 $preferencename1 = array('type' => 'turma', 'value' => 'T-451');
 $preferencename2 = array('type' => 'unidade', 'value' => 'U-4');
 
@@ -44,7 +48,7 @@ $user1->preferences = array(
 	$preferencename1,
 	$preferencename2
 );
-*/
+
 $params = array($user1);
 
 $serverurl = "$url?wstoken=$token&wsdl=1";
