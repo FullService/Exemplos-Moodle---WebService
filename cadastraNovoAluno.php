@@ -9,7 +9,6 @@
 
 <?php
 
-require 'Zend/Soap/Client.php';
 $host    = "http://192.168.0.38/";
 $install = "moodlerooms/";
 $service = "webservice/soap/server.php";
