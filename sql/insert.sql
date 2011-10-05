@@ -6,7 +6,7 @@ SET
 `methodname`	= 'create_users', 
 `classpath`		= 'SistemaAula/user/externallib.php',
 `component`		= 'sistemaaula',
-`capabilities`	= 'moodle/user:create'
+`capabilities`	= 'moodle/user:create';
 
 INSERT  IGNORE INTO `mdl_external_functions`
 SET  
@@ -15,7 +15,7 @@ SET
 `methodname`	= 'create_courses', 
 `classpath`		= 'SistemaAula/course/externallib.php',
 `component`		= 'sistemaaula',
-`capabilities`	= 'moodle/course:create,moodle/course:visibility'
+`capabilities`	= 'moodle/course:create,moodle/course:visibility';
 
 INSERT  IGNORE INTO `mdl_external_functions`
 SET  
@@ -24,7 +24,7 @@ SET
 `methodname`	= 'manual_enrol_users', 
 `classpath`		= 'SistemaAula/enrol/externallib.php',
 `component`		= 'sistemaaula_enrol_manual',
-`capabilities`	= 'enrol/manual:enrol'
+`capabilities`	= 'enrol/manual:enrol';
 
 INSERT  IGNORE INTO `mdl_external_functions`
 SET  
@@ -33,4 +33,4 @@ SET
 `methodname`	= 'send_instantmessages', 
 `classpath`		= 'SistemaAula/message/externallib.php',
 `component`		= 'sistemaaula',
-`capabilities`	= 'moodle/site:sendmessage'
+`capabilities`	= 'moodle/site:sendmessage';
