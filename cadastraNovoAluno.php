@@ -9,6 +9,10 @@
 
 <?php
 
+
+require_once 'nusoap/nusoap.php';    
+
+
 $host    = "http://192.168.0.38/";
 $install = "moodlerooms/";
 $service = "webservice/soap/server.php";
@@ -21,23 +25,23 @@ $soapAction = "sistemaaula_user_create_users";
 
 
 $user1 = new stdClass();
-$user1->username = 'delfino31';	//String 
+$user1->username = 'delfino32';	//String 
 $user1->password = 'Senha_1235r';		// 
-$user1->firstname = 'Primeiro31';		//
-$user1->lastname = 'Ultimo';			//
-$user1->email = 'exemplo31@carlosdelfino.eti.br'; // String, obrigatoriamente um e-mail
+$user1->firstname = 'Carlos32';		//
+$user1->lastname = 'Delfino';			//
+$user1->email = 'exemplo32@carlosdelfino.eti.br'; // String, obrigatoriamente um e-mail
 // $user1->phone1 = '(31)98387171';		// Esta propriedade eu teste inserir, mas não é aceita
 										// apenas as documentadas são passadas.  
 $user1->auth = 'manual';				// String, metodo de autenticação, 
 										// usar sempre "manual", 
 										// podemos criar um metodo de 
 										// autenticação padrão para o SistemaAula.
-$user1->idnumber = '31305z0z0.a.as222';	// String, até 100 Caracteres, codigo unico que identifica o usuário no processo de integração.
+$user1->idnumber = '32305z0z0.a.as222';	// String, até 100 Caracteres, codigo unico que identifica o usuário no processo de integração.
 $user1->lang = 'pt_br';					// String, Observe que está fora do padrão 
 $user1->theme = 'standard';				// String, padrão para "starndard"
 $user1->timezone = '-3';				// String, usar sempre -3, ou "America/Brazil"
 $user1->mailformat = 1;					// Int, usar 0 para formato plano, ou 1 para formato HTML
-$user1->description = 'Sou o cara 31 migrado do Sistema Aula usando nova função criada no webservice do sistema aula, para aqui e não onde estou.';
+$user1->description = 'Sou o cara 32 migrado do Sistema Aula usando nova função criada no webservice do sistema aula, para aqui e não onde estou. Usando NuSoap';
 										// Descrição do usuário.
 $user1->city = 'Belo Horizonte';
 $user1->country = 'BR';					// String, país com duas letras, em maiúsculas.
@@ -62,9 +66,18 @@ $params = array($user1);
 
 $serverurl = "$url?wstoken=$token&wsdl=1";
 
-$client = new SoapClient($serverurl);
+$client = new nusoap_client($serverurl,true);
+
+	
 try {
-	$resp = $client->__soapCall($soapAction, array($params));
+	
+	echo "<hr />";
+	echo $client->getError();
+	echo "<hr />";
+	
+	
+	$resp = $client->call($soapAction, array($params));
+		
 } catch (Exception $e) {
 	print_r($e);
 }
