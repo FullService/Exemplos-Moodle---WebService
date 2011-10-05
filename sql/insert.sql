@@ -34,3 +34,11 @@ SET
 `classpath`		= 'SistemaAula/message/externallib.php',
 `component`		= 'sistemaaula',
 `capabilities`	= 'moodle/site:sendmessage';
+
+INSERT IGNORE INTO  `mdl_external_functions` 
+`name` 			= 'sistemaaula_user_update_users',
+`classname`		= 'sistemaaula_user_external',
+`methodname`	= 'update_users',
+`classpath` 	= 'SistemaAula/user/externallib.php',
+`component` 	= 'sistemaaula',
+`capabilities`	= 'moodle/user:update';

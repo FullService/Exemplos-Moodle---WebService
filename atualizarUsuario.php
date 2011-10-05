@@ -18,7 +18,7 @@ $url = "$host$install$service";
 
 $token = "99b30439d03a76ec2383601c3174cb5d";
 
-$soapAction = "moodle_user_update_users";
+$soapAction = "sistemaaula_user_update_users";
 
 
 $user1 = new stdClass();
