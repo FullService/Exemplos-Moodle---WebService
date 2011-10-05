@@ -20,25 +20,26 @@ $token = "99b30439d03a76ec2383601c3174cb5d";
 $soapAction = "sistemaaula_course_create_courses"; 
 
 $course1 = new stdClass();
-$course1->fullname = "Nome Completo do Curso";	// string, Nome Completo do Curso
-$course1->shortname = "ncc-1";					// string, Nome Curto 
+$course1->fullname = "Curso para teste Enrol";	// string, Nome Completo do Curso
+$course1->shortname = "CPTE-1";					// string, Nome Curto 
 $course1->categoryid  = "1";					// int, id da categoria
 												// deve ser conhecido o id conforme já cadastrado no moodle 
-$course1->idnumber  = "axo.23d.0x";				// string, Opcional, Id universal do curso
-$course1->summary  = "Um breve descrição do curso";
+$course1->idnumber  = "axo.44d.1x";				// string, Opcional, Id universal do curso
+$course1->summary  = "Este curso foi criado para teste do Enrol/Matricula de usuário via novo WebService do Aula";
 												// string, Opcional, summary
+$course1->visible  = "1";						// int  Opcional //1: available to student, 0:not available
+$course1->groupmode  = "1";						// int  Padrão para "0" //no group, separate, visible
+$course1->format  = "weeks";					// string  Padrão para "weeks" //course format: weeks, topics, social, site,..
+
 /*
 $course1->summaryformat  = "";	// int  Padrão para "0" //the summary text Moodle format
-$course1->format  = "";			// string  Padrão para "weeks" //course format: weeks, topics, social, site,..
 $course1->showgrades  = "";		// int  Padrão para "1" //1 if grades are shown, otherwise 0
 $course1->newsitems  = "";		// int  Padrão para "5" //number of recent items appearing on the course page
 $course1->startdate  = "";		// int  Opcional //timestamp when the course start
 $course1->numsections  = "";	// int  Padrão para "10" //number of weeks/topics
 $course1->maxbytes  = "";		// int  Padrão para "8388608" //largest size of file that can be uploaded into the course
 $course1->showreports  = "";	// int  Padrão para "0" //are activity report shown (yes = 1, no =0)
-$course1->visible  = "";		// int  Opcional //1: available to student, 0:not available
 $course1->hiddensections  = "";	// int  Padrão para "0" //How the hidden sections in the course are displayed to students
-$course1->groupmode  = "";		// int  Padrão para "0" //no group, separate, visible
 $course1->groupmodeforce  = "";	// int  Padrão para "0" //1: yes, 0: no
 $course1->defaultgroupingid  = "";	// int  Padrão para "0" //default grouping id
 $course1->enablecompletion  = "";	// int  Opcional //Enabled, control via completion and activity settings. Disabled,
