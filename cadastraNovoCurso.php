@@ -20,17 +20,18 @@ $token = "99b30439d03a76ec2383601c3174cb5d";
 $soapAction = "sistemaaula_course_create_courses"; 
 
 $course1 = new stdClass();
-$course1->fullname = "Curso para teste Enrol";	// string, Nome Completo do Curso
-$course1->shortname = "CPTE-1";					// string, Nome Curto 
-$course1->categoryid  = "1";					// int, id da categoria
+												// Tipo,  tamanho, Opcional/Obrigatorio, Oservação
+$course1->fullname = "Curso para teste Enrol";	// string,    254, Obrigatorio,          Nome Completo do Curso
+$course1->shortname = "CPTE-1";					// string,    100, Obrigatorio,          Nome Curto 
+$course1->categoryid  = "1";					// int, 	   10, Obrigatorio, 		 Id da categoria
 												// deve ser conhecido o id conforme já cadastrado no moodle 
-$course1->idnumber  = "axo.44d.1x";				// string, Opcional, Id universal do curso
+$course1->idnumber  = "axo.44d.1x";				// string,    100, Opcional,             Id universal do curso
 $course1->summary  = "Este curso foi criado para teste do Enrol/Matricula de usuário via novo WebService do Aula";
-												// string, Opcional, summary
-$course1->visible  = "1";						// int  Opcional //1: available to student, 0:not available
-$course1->groupmode  = "1";						// int  Padrão para "0" //no group, separate, visible
-$course1->format  = "weeks";					// string  Padrão para "weeks" //course format: weeks, topics, social, site,..
-
+												// string,     1K, Obrigatorio, 			 Sumário
+$course1->visible  = "1";						// int,         1, Obrigatorio,             1: Disponível para estudante, 0:Não disponível
+$course1->groupmode  = "1";						// int,         1, Obrigatorio,             Padrão para "0" //no group, separate, visible
+$course1->format  = "weeks";					// string,      1, Obrigatorio,				Padrão para "weeks" //Formato do curso: weeks, topics, social, site,..
+												// Atenção, no nosso caso devemos usar sempre Tópico.
 /*
 $course1->summaryformat  = "";	// int  Padrão para "0" //the summary text Moodle format
 $course1->showgrades  = "";		// int  Padrão para "1" //1 if grades are shown, otherwise 0
