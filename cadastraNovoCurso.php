@@ -22,7 +22,7 @@ $soapAction = "sistemaaula_course_create_courses";
 $course1 = new stdClass();
 												// Tipo,  tamanho, Opcional/Obrigatorio, Oservação
 $course1->fullname = "Curso para teste Enrol";	// string,    254, Obrigatorio,          Nome Completo do Curso
-$course1->shortname = "CPTE-1";					// string,    100, Obrigatorio,          Nome Curto 
+$course1->shortname = "CPTE-1";					// string,    100, Obrigatorio,          Nome Curto, evite usar espaço, substitua os espaços por traço baixo (underscore)
 $course1->categoryid  = "1";					// int, 	   10, Obrigatorio, 		 Id da categoria
 												// deve ser conhecido o id conforme já cadastrado no moodle 
 $course1->idnumber  = "axo.44d.1x";				// string,    100, Opcional,             Id universal do curso
